@@ -1,0 +1,27 @@
+Hypothesis:is a Pokémon of LEGENDARY rarity or not ?
+
+#Column , 	Column Name , Description, Status
+(1:19)	,against   		,Pokémon's damage multiplier against other Pokémon of that type.
+20)		,attack:	 	,The Attack stat determines how powerful a Pokémon's physical moves will be
+21) 	,egg_steps	 	,Each Pokémon's egg has a number of steps to required for the egg to hatch
+24)		,capture_rate	,Each species of Pokémon has a catch rate that applies to all its members. When a Poké Ball is thrown at a wild Pokémon, the game uses that Pokémon's catch rate in a formula to determine the chances of catching that Pokémon. Higher catch rates mean that the Pokémon is easier to catch, up to a maximum of 255.
+26)		,defense	 	,Defense is a stat that decides how much damage a Pokémon takes when hit with a physical move. And physical moves themselves are (typically) determined by Attack. Usually, Attacks make physical contact with the Pokemon, and so the highest Defense Pokemon endure or reflect these moves as much as possible.
+29)		,hp				,Short for (hit-points), it is a value that determines how much damage a Pokémon can receive. When a Pokémon's HP is completely down to 0, the Pokémon will faint.
+34)		,sp_attack		,special move attack, an Alternative attack uses less frequently than the primary attack
+35)		,sp_defense		,special move defense, works the same as defense but against SP_attacks of the enemy pokemon
+36)		,speed			,a value that determines which Pokémon will act first during battle. Generally, the Pokémon with the higher Speed will be the one to attack first.
+37)		,type1			,Determines the primary   type of the pokemon "damage received = enemy Attack * Enemy Damage multiplier against this type"
+38)		,type2			,Determines the secondary type of the pokemon, same as type1.
+41)		,is_legendary	,determines if the Pokemon is Stronger than other pokemons to be classified of LEGENDARY RARITY
+
+Columns that have been removed for being useless for this Hypothesis:
+*0)		,Abilities 		,Each Pokémon and his evolved instances have the same 2/3 Abilities
+*25)	,classification	,identifies a Pokémon according to their biological characteristics, The damage a pokemon takes is influenced by his classification. There are 18 Pokemon types 
+*27)	,experience		,Experience is gained upon the opponent Pokémon fainting, and its amount is calculated as a function of the fainted Pokémon's level, as well as species.
+*28)	,height_m		,height of the Pokémon in meters
+*30)	,japanese_name	,name of the Pokémon in the japanese form
+*31)	,name			,name of the Pokémon in English form
+*32)	,precentage??
+*33)	,pokedex		,index of the Pokémon
+*39)	,weight_kg		,Pokemon's weight in kiloGrams
+*40)	,generation		,determines the release season of that pokemon
