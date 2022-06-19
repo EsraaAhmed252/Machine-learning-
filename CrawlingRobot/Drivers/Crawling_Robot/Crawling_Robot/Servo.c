@@ -9,7 +9,7 @@ void timer1_PWM_init(){
 	OCR1AH = 0;
 	OCR1AL = 0;
 	TCCR1A = 0XA1;//0b10100001
-	TCCR1B = 1<<CS10;
+	TCCR1B = 1<<CS11;
 }
 
 void servo_init(){

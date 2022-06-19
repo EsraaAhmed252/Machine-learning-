@@ -4,8 +4,8 @@
  * Created: 6/18/2022 5:32:41 PM
  * Author : Esraa
  */ 
-#define outputA ((PINB >> 5) & 1)
-#define outputB ((PINB >> 7) & 1)
+#define outputA ((PIND >> 2) & 1)
+#define outputB ((PIND >> 3) & 1)
 #include "header.h"
 #include "Servo.h"
 #include "DIO_interface.h"
@@ -40,9 +40,9 @@ Edited by :
 //               Then it just cycles back and forth through those two arm movements.
 // improvements to algorithm: sometimes using just two arm positions is too little to produce much movement (although sometimes it is reallly good)
 //                            so could change successes table to store 3 arm movements and then I think it would produce greater movement each time.
-  uint16_t counter = 0;
+
+uint16_t counter = 0;
 int state;
-float distDifference,distPrevious,distCurrent;
 int success[5] = {};
 int spos1;
 int spos2;
@@ -85,8 +85,8 @@ void doTraining() {
 		servoA_write(spos1);
 		servoB_write(spos2);
 		
-		servoA_write(spos1);
-		servoB_write(spos2);
+		servoA_write(spos3);
+		servoB_write(spos4);
 		
 		servoA_write(0);
 		servoB_write(0);
@@ -127,7 +127,6 @@ int main (){
 	servo_init();
 	_delay_ms(1000);
 	SetInterrupt0(CHANGE);
-	SetInterrupt1(CHANGE);
 	sei();
 	while(1){
 		doTraining();     // trial and error training with distance reinforcement

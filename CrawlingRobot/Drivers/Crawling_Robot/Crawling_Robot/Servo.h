@@ -13,8 +13,8 @@ void timer1_PWM_init();
 void servo_init();
 void servoA_write(uint8_t);
 void servoB_write(uint8_t);
-#define SERVO_A SETBIT(PORTD,4);
-#define SERVO_B SETBIT(PORTD,5);
+#define SERVO_A SETBIT(DDRD,4);
+#define SERVO_B SETBIT(DDRD,5);
 #define MAX_SIZE 65535
 
 
